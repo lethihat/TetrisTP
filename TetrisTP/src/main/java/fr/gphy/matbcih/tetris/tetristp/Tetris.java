@@ -28,6 +28,7 @@ public class Tetris extends Applet {
 	public final static byte ROWS = 18;
 	public final static byte COLUMNS = 10;
 	public final static int EMPTY = -1;
+	public final static int EMPTY2 = -1;
 	public final static int DELETED_ROWS_PER_LEVEL = 5;
         
         //public final static Color PIECE_COLORS[];
