@@ -14,12 +14,13 @@ import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
 import java.io.File;
+import java.net.URL;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-//import javax.media.Manager;
-//import javax.media.MediaLocator;
-//import javax.media.Player;
+/*import javax.media.Manager;
+import javax.media.MediaLocator;
+import javax.media.Player;*/
 
 public class Tetris extends Applet {
 
@@ -282,14 +283,12 @@ public class Tetris extends Applet {
         sounds.playSoundtrack();
     }
 
-    /*private void startSound() {
+   /* private void startSound() {
         try {
-            //File f = new File("/resources/tetris.wav");
-            //MediaLocator ml = new MediaLocator(f.getAbsolutePath());
-            String FichierAdresse = "file:////C:\\Users\\Bichon\\Documents\\NetBeansProjects\\TpJava\\TetrisTP\\TetrisTP\\src\\main\\resources\\tetris.wav";
-            MediaLocator FichierLocator = new MediaLocator(FichierAdresse);
-                
-            Player p = Manager.createPlayer(ml);
+           
+            URL f = new File("/tetris.wav").toURI().toURL();
+            MediaLocator m = new MediaLocator(f.getClass().getResource("/tetris.wav"));//recuperation des resources dans l'arborescence maven
+            Player p = Manager.createPlayer(m);
             p.start();
         } catch (Exception ex) {
             Logger.getLogger(Tetris.class.getName()).log(Level.SEVERE, null, ex);
