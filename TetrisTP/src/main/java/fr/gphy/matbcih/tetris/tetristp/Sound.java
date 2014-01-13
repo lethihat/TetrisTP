@@ -34,7 +34,7 @@ public class Sound {
     public void play(String filePath) {
         final File file = new File(filePath);
  
-        try (final AudioInputStream in = getAudioInputStream(file)) {
+        /*  try (final AudioInputStream in = getAudioInputStream(file)) {
              
             final AudioFormat outFormat = getOutFormat(in.getFormat());
             final Info info = new Info(SourceDataLine.class, outFormat);
@@ -55,7 +55,7 @@ public class Sound {
                | LineUnavailableException 
                | IOException e) {
             throw new IllegalStateException(e);
-        }
+        }*/
     }
  
     private AudioFormat getOutFormat(AudioFormat inFormat) {
